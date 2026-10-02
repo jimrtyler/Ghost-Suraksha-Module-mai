@@ -78,7 +78,9 @@ Get-Ghost
 ### सुरक्षा मूल्यांकन
 ```powershell
 # Ghost मॉड्यूल लोड करू
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 
 # वर्तमान सुरक्षा स्थिति केँ जाँच करू
 Get-Ghost
@@ -106,7 +108,9 @@ Set-Ghost -SMBv1 -RDP -USBStorage -Intune
 
 ### विकल्प 1: प्रत्यक्ष डाउनलोड (परीक्षण)
 ```powershell
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 ```
 
 ### विकल्प 2: मॉड्यूल स्थापना
